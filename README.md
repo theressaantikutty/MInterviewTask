@@ -56,7 +56,7 @@ CLOSED - REOPENS `{day}` at `{opening time}`
 
 THEN the Helper Service list item displays a clear visual representation of whether it is the service is open or closed
 
-*Note: Full details of this visual representation required is given in the wireframe / annotations*
+use grey background on card for closed, and yellow for open
 
 
 ### Integration
