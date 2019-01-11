@@ -70,6 +70,6 @@ We'd like the current weather for London at the bottom of the page.  Create a bu
 ### Integration
 The code that handles the Helper Service inforation has been provided for you.
 
-![mariecurie-scenario-wireframe](https://cloud.githubusercontent.com/assets/1429224/7251036/313b7ee0-e81f-11e4-85a6-3b905d8313cc.png)
+![capture](https://user-images.githubusercontent.com/42374797/51045249-11033000-15bb-11e9-8b4f-4ba251becf1a.PNG)
 
        
