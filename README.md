@@ -58,6 +58,10 @@ THEN the Helper Service list item displays a clear visual representation of whet
 
 use grey background on card for closed, and yellow for open
 
+**AC5: Backend**
+
+Create a simple logger service that can capture all requests made to the service, plus log any errors that the application generates.
+
 
 ### Integration
 The code that handles the Helper Service inforation has been provided for you.
