@@ -56,7 +56,12 @@ CLOSED - REOPENS `{day}` at `{opening time}`
 
 THEN the Helper Service list item displays a clear visual representation of whether it is the service is open or closed
 
-use grey background on card for closed, and yellow for open
+Use grey background on card for closed, and orange for open
+
+The style sheet classes that you will need to use to indicate the closed and open states are –
+
+bg-color-light-grey and
+bg-color-donation-orange
 
 **AC5: Backend**
 
