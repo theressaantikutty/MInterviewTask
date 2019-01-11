@@ -60,10 +60,16 @@ use grey background on card for closed, and yellow for open
 
 **AC5: Backend**
 
-Create a simple logger service that can capture all requests made to the service, plus log any errors that the application generates.
+Create a simple logger service (to a file) that can capture all requests made to the service (maybe write out time of access, IP address - anything you'd like), plus log any errors that the application generates.
+
+**AC6: Backend - Bonus**
+
+We'd like the current weather for London at the bottom of the page.  Create a button, that when pressed calls an action on a controller that sends a request to a weather API https://openweathermap.org/current (full documentation on that page) and display the response on the page.  Do not worry too much about the presentation.  
 
 
 ### Integration
 The code that handles the Helper Service inforation has been provided for you.
+
+![mariecurie-scenario-wireframe](https://cloud.githubusercontent.com/assets/1429224/7251036/313b7ee0-e81f-11e4-85a6-3b905d8313cc.png)
 
        
