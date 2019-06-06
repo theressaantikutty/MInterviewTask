@@ -65,11 +65,11 @@ bg-color-donation-orange
 
 **AC5: Backend**
 
-Create a simple logger service (to a file) that can capture all requests made to the service (maybe write out time of access, IP address - anything you'd like), plus log any errors that the application generates.
+Create a simple logger service (from scratch, to a file) that can capture all requests made to the service (maybe write out time of access, IP address - anything you'd like), plus log any errors that the application generates.
 
-**AC6: Backend - Bonus**
+**AC6: Backend**
 
-We'd like the current weather for London at the bottom of the page.  Create a button, that when pressed calls an action on a controller that sends a request to a weather API https://openweathermap.org/current (full documentation on that page) and display the response on the page.  Do not worry too much about the presentation.  
+We'd like the current weather for each of the helper regions under their name - rough location is fine.  Create a button, that when pressed calls an action on a controller that sends a request to a weather API https://openweathermap.org/current (full documentation on that page) and display the response on the page.  Do not worry too much about the presentation - this isn't a test of front-end skills.  
 
 
 ### Integration
