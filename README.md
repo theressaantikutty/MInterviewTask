@@ -4,13 +4,13 @@
 ## Task
 We would like you to demonstrate your development skills by delivering a single page web site based on a set of requirements that match the way we deliver solutions within our team.
 
-* We don't expect this task should take longer than **2 hours**.  However, the amount of time you spend is entirely up to you
-* You will need a **GitHub account** to clone this repository (Junior-Developer-Interview-Task)
+* We don't expect that this task should take longer than **2 hours**.  However, the amount of time you spend is entirely up to you
+* You will need a **GitHub account** to clone this repository (Developer-Interview-Task)
 * Once you have finished, please push it to your own GitHub repository and let us know
 
 =======
 
-During the face-to-face interview we would like to discuss your solution and your approach. We will expect you to demonstrate how the acceptance criteria have been met and also any challenges you faced during development.
+During the face-to-face interview we would like to discuss your solution and your approach. We will expect you to demonstrate how the acceptance criteria have been met and also any challenges you faced during development, together with any enhancements that you'd make if you had further time.
 
 If you have any questions, please get in touch.
 
