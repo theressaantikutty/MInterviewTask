@@ -1,4 +1,4 @@
-# Junior-Developer-Interview-Task
+# Developer-Interview-Task
 
 
 ## Task
