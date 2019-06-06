@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace JuniorInterviewTask.Models
 {
-    public class HelperService
+    public class HelperServiceModel
     {
         public Guid Id { get; set; }
         public string Title { get; set; }

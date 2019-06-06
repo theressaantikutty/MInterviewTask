@@ -12,7 +12,7 @@ namespace JuniorInterviewTask.Services
         /// Returns all HelperService data, form the back-office CRM system.
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<HelperService> Get()
+        public IEnumerable<HelperServiceModel> Get()
         {
             return HelperServiceFactory.Create();
         }
@@ -22,7 +22,7 @@ namespace JuniorInterviewTask.Services
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns></returns>
-        public HelperService Get(Guid id)
+        public HelperServiceModel Get(Guid id)
         {
             return HelperServiceFactory.Create().FirstOrDefault(g => g.Id == id);
         }

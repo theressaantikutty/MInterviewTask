@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using JuniorInterviewTask.Models;
 
 namespace JuniorInterviewTask.Services
 {
     public class HelperServiceFactory
     {
-        internal static List<HelperService> Create()
+        internal static List<HelperServiceModel> Create()
         {
             var weekdayOpeningTimes = new List<int> { 9, 17 };
             var alternativeOpeningTime = new List<int> { 8, 12 };
@@ -17,7 +15,7 @@ namespace JuniorInterviewTask.Services
 
             var description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
 
-            var eastLondonHelper = new HelperService
+            var eastLondonHelper = new HelperServiceModel
             {
                 Title = "East London Helper Service",
                 Description = description,
@@ -32,7 +30,7 @@ namespace JuniorInterviewTask.Services
                 TelephoneNumber = "0207 0000000"
             };
 
-            var northLondonHelper = new HelperService
+            var northLondonHelper = new HelperServiceModel
             {
                 Title = "North London Helper Service",
                 Description = description,
@@ -47,7 +45,7 @@ namespace JuniorInterviewTask.Services
                 TelephoneNumber = "0207 0000000"
             };
 
-            var bristolHelper = new HelperService
+            var bristolHelper = new HelperServiceModel
             {
                 Title = "Bristol Helper Service",
                 Description = description,
@@ -62,7 +60,7 @@ namespace JuniorInterviewTask.Services
                 TelephoneNumber = "0117 0000000"
             };
 
-            var somersetHelper = new HelperService
+            var somersetHelper = new HelperServiceModel
             {
                 Title = "Somerset Helper Service",
                 Description = description,
@@ -77,7 +75,7 @@ namespace JuniorInterviewTask.Services
                 TelephoneNumber = "0207 0000000"
             };
 
-            var nottinghamHelper = new HelperService
+            var nottinghamHelper = new HelperServiceModel
             {
                 Title = "Nottingham Helper Service",
                 Description = description,
@@ -92,7 +90,7 @@ namespace JuniorInterviewTask.Services
                 TelephoneNumber = "0116 0000000"
             };
 
-            var liverpoolHelper = new HelperService
+            var liverpoolHelper = new HelperServiceModel
             {
                 Title = "Liverpool Helper Service",
                 Description = description,
@@ -107,7 +105,7 @@ namespace JuniorInterviewTask.Services
                 TelephoneNumber = "0151 0000000"
             };
 
-            var northernIrelandHelper = new HelperService
+            var northernIrelandHelper = new HelperServiceModel
             {
                 Title = "Belfast Helper Service",
                 Description = description,
@@ -122,7 +120,7 @@ namespace JuniorInterviewTask.Services
                 TelephoneNumber = "0289 0000000"
             };
 
-            var westMidlandsHelper = new HelperService
+            var westMidlandsHelper = new HelperServiceModel
             {
                 Title = "West Midlands Helper Service",
                 Description = description,
@@ -137,7 +135,7 @@ namespace JuniorInterviewTask.Services
                 TelephoneNumber = "0289 0000000"
             };
 
-            var walesHelper = new HelperService
+            var walesHelper = new HelperServiceModel
             {
                 Title = "Wales Helper Service",
                 Description = description,
@@ -152,7 +150,7 @@ namespace JuniorInterviewTask.Services
                 TelephoneNumber = "029 8800000"
             };
 
-            var fifeHelper = new HelperService
+            var fifeHelper = new HelperServiceModel
             {
                 Title = "Fife Helper Service",
                 Description = description,
@@ -167,13 +165,13 @@ namespace JuniorInterviewTask.Services
                 TelephoneNumber = "0159 2000000"
             };
 
-            var openingHours = new List<HelperService> { eastLondonHelper, northLondonHelper, bristolHelper, somersetHelper, nottinghamHelper, liverpoolHelper, northernIrelandHelper, westMidlandsHelper, walesHelper, fifeHelper };
+            var openingHours = new List<HelperServiceModel> { eastLondonHelper, northLondonHelper, bristolHelper, somersetHelper, nottinghamHelper, liverpoolHelper, northernIrelandHelper, westMidlandsHelper, walesHelper, fifeHelper };
 
             return DeliberateBug(openingHours);
         }
 
         
-        private static List<HelperService> DeliberateBug(List<HelperService> openingHours)
+        private static List<HelperServiceModel> DeliberateBug(List<HelperServiceModel> openingHours)
         {
             var listCount = openingHours.Count;
 

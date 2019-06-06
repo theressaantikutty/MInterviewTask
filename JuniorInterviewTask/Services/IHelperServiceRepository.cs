@@ -6,7 +6,7 @@ namespace JuniorInterviewTask.Services
 {
     interface IHelperServiceRepository
     {
-        IEnumerable<HelperService> Get();
-        HelperService Get(Guid id);
+        IEnumerable<HelperServiceModel> Get();
+        HelperServiceModel Get(Guid id);
     }
 }
