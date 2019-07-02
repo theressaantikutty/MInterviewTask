@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using JuniorInterviewTask.Models;
+using InterviewTask.Models;
 
-namespace JuniorInterviewTask.Services
+namespace InterviewTask.Services
 {
     public class HelperServiceRepository : IHelperServiceRepository
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace JuniorInterviewTask.Models
+namespace InterviewTask.Models
 {
     public class HelperServiceModel
     {

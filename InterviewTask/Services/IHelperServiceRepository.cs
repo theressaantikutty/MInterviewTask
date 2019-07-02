@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using JuniorInterviewTask.Models;
+using InterviewTask.Models;
 
-namespace JuniorInterviewTask.Services
+namespace InterviewTask.Services
 {
     interface IHelperServiceRepository
     {

@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace JuniorInterviewTask
+namespace InterviewTask
 {
     public class BundleConfig
     {
