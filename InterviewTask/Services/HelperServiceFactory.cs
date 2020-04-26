@@ -12,7 +12,7 @@ namespace InterviewTask.Services
         {
             var weekdayOpeningTimes = new List<int> { 9, 17 };
             var alternativeOpeningTime = new List<int> { 8, 12 };
-            var weekendOpeningTimes = new List<int> { 10, 12 };
+            var weekendOpeningTimes = new List<int> { 10, 24 };
             var closedTimes = new List<int> { 0, 0 };
 
             var description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. " 
@@ -261,24 +261,35 @@ namespace InterviewTask.Services
 					openHours = helperService.SundayOpeningHours;
 					break;
 			}
-			if (openHours == null)
+			if (openHours == null)//Handles Deliberate bug
 			{
 				helperService.ServiceCenterStatus.OpenClosedStatus = Constants.TIMING_MESSAGE;
 			}
 			else
 			{
-				if (openHours[0] > 0)
+				if ((openHours[0] > 0))//Checks if open on that day
 				{
-					if (!nextDaystatus)
-						helperService.ServiceCenterStatus.OpenClosedStatus = Constants.OPEN_STATUS + ConvertTime(openHours[1].ToString());
-					else
+					if (!nextDaystatus)//Checks if current day
+					{
+						if ((DateTime.Now.Hour >= openHours[0]) && (DateTime.Now.Hour <= openHours[1]))//Checks if open at current time and current day
+						{
+							helperService.ServiceCenterStatus.OpenClosedStatus = Constants.OPEN_STATUS + ConvertTime(openHours[1].ToString());
+						}
+						else
+						{
+							dayCount++;
+							SetClosedStatus(helperService, day);//get next working day and time 
+						}
+					}
+					else // setting Reopen day and time
+					{
 						helperService.ServiceCenterStatus.OpenClosedStatus = Constants.CLOSED_STATUS + day.DayOfWeek.ToString() + " at " + ConvertTime(openHours[0].ToString());
+					}
 				}
-				else
+				else 
 				{
 					dayCount++;
 					SetClosedStatus(helperService, day);
-					
 				}
 			}
 			
