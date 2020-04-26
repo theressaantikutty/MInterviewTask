@@ -8,5 +8,6 @@ namespace InterviewTask.Services
     {
         IEnumerable<HelperServiceModel> Get();
         HelperServiceModel Get(Guid id);
-    }
+		void GetOpeningClosedStatus(HelperServiceModel helperService);	
+	}
 }

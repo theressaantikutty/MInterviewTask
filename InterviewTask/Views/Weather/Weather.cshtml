@@ -1,0 +1,72 @@
+﻿@model InterviewTask.Models.WeatherModel
+
+@if (Model.ErrorMsg == null)
+{
+	<table class="table">
+		<tr>
+			<td>
+				Country : @Html.DisplayFor(modelItem => Model.Country)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				City : @Html.DisplayFor(modelItem => Model.City)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Lat : @Html.DisplayFor(modelItem => Model.Lat)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Lon : @Html.DisplayFor(modelItem => Model.Lon)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Description :@Html.DisplayFor(modelItem => Model.Description)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Humidity: @Html.DisplayFor(modelItem => Model.Humidity)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Temp: @Html.DisplayFor(modelItem => Model.Temp)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				TempMax: @Html.DisplayFor(modelItem => Model.TempMax)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				TempMin: @Html.DisplayFor(modelItem => Model.TempMin)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				WindSpeed: @Html.DisplayFor(modelItem => Model.Appid)
+			</td>
+		</tr>
+		@*<tr>
+			<td>
+				@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+				@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+				@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+			</td>
+		</tr>*@
+
+
+	</table>
+}
+else
+{
+<p>@Model.ErrorMsg</p>
+}
+
+

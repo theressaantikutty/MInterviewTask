@@ -7,9 +7,9 @@ namespace InterviewTask.Models
     {
         public Guid Id { get; set; }
         public string Title { get; set; }
-        public string Description { get; set; }
+		public string Location { get; set; }
+		public string Description { get; set; }
         public string TelephoneNumber { get; set; }
-
         public List<int> MondayOpeningHours { get; set; }
         public List<int> TuesdayOpeningHours { get; set; }
         public List<int> WednesdayOpeningHours { get; set; }
@@ -17,6 +17,7 @@ namespace InterviewTask.Models
         public List<int> FridayOpeningHours { get; set; }
         public List<int> SaturdayOpeningHours { get; set; }
         public List<int> SundayOpeningHours { get; set; }
-    }
+		public ServiceCenterStatus ServiceCenterStatus { get; set; }
+	}	
 }
 

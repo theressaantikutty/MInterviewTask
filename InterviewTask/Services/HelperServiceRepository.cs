@@ -7,7 +7,7 @@ using InterviewTask.Models;
 namespace InterviewTask.Services
 {
     public class HelperServiceRepository : IHelperServiceRepository
-    {
+    {		
         /// <summary>
         /// Returns all HelperService data, form the back-office CRM system.
         /// </summary>
@@ -16,7 +16,6 @@ namespace InterviewTask.Services
         {
             return HelperServiceFactory.Create();
         }
-
         /// <summary>
         /// Returns a single HelperService from the back-office CRM system.
         /// </summary>
@@ -26,5 +25,10 @@ namespace InterviewTask.Services
         {
             return HelperServiceFactory.Create().FirstOrDefault(g => g.Id == id);
         }
-    }
+		public void GetOpeningClosedStatus(HelperServiceModel helperService)
+		{
+		   new HelperServiceFactory().GetOpeningClosedStatus(helperService);
+		}
+		
+	}
 }
