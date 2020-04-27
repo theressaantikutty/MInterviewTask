@@ -10,12 +10,12 @@ namespace InterviewTask.Services
 		int dayCount;
 		internal static List<HelperServiceModel> Create()
         {
-            var weekdayOpeningTimes = new List<int> { 9, 17 };
-            var alternativeOpeningTime = new List<int> { 8, 12 };
-            var weekendOpeningTimes = new List<int> { 10, 24 };
-            var closedTimes = new List<int> { 0, 0 };
+			var weekdayOpeningTimes = new List<int> { 9, 17 };
+			var alternativeOpeningTime = new List<int> { 8, 12 };
+			var weekendOpeningTimes = new List<int> { 10, 12 };
+			var closedTimes = new List<int> { 0, 0 };
 
-            var description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. " 
+			var description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. " 
 				//+
 				//"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
 				;
@@ -271,14 +271,19 @@ namespace InterviewTask.Services
 				{
 					if (!nextDaystatus)//Checks if current day
 					{
-						if ((DateTime.Now.Hour >= openHours[0]) && (DateTime.Now.Hour <= openHours[1]))//Checks if open at current time and current day
+						if ((DateTime.Now.Hour >= openHours[0]) && (DateTime.Now.Hour < openHours[1]))//Checks if open at current time and current day
 						{
 							helperService.ServiceCenterStatus.OpenClosedStatus = Constants.OPEN_STATUS + ConvertTime(openHours[1].ToString());
+						}
+						else if((DateTime.Now.Hour < openHours[0]))
+						{
+							helperService.ServiceCenterStatus.OpenClosedStatus = Constants.CLOSED_STATUS + day.DayOfWeek.ToString() + " at " + ConvertTime(openHours[0].ToString());
+							helperService.ServiceCenterStatus.IsOpen = false;
 						}
 						else
 						{
 							dayCount++;
-							SetClosedStatus(helperService, day);//get next working day and time 
+							SetClosedStatus(helperService, day);
 						}
 					}
 					else // setting Reopen day and time

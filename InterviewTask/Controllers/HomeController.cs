@@ -1,4 +1,5 @@
-﻿using InterviewTask.Models;
+﻿using InterviewTask.Filters;
+using InterviewTask.Models;
 using InterviewTask.Services;
 using InterviewTask.Utilities;
 using System;
@@ -7,12 +8,12 @@ using System.Web.Mvc;
 
 namespace InterviewTask.Controllers
 {
+	[HelperServiceFilter]
 	public class HomeController : Controller
 	{
 		readonly HelperServiceRepository helperServiceRepository;
 		public HomeController()
 		{
-			FileLogger.Log("HelperService Request Initialized - " + System.Environment.UserName, "Info");
 			helperServiceRepository = new HelperServiceRepository();
 		}
 		/*
@@ -31,9 +32,8 @@ namespace InterviewTask.Controllers
 				return View(serviceModelList);				
 			}
 			catch (Exception ex)
-			{
-				FileLogger.Log(ex.Message, "Error");
-				return View();
+			{				
+				throw ex;				
 			}
 		} 		
 	}

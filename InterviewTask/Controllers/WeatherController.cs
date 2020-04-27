@@ -1,8 +1,11 @@
-﻿using InterviewTask.Models;
+﻿using InterviewTask.Filters;
+using InterviewTask.Models;
 using InterviewTask.Services;
 using System.Web.Mvc;
+
 namespace InterviewTask.Controllers
 {
+	[HelperServiceFilter]
 	public class WeatherController : Controller 
 	{
 		// GET: Weather
